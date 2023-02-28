@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int Num,i,sum,a,pot = 0;
+    
+    cout << "Ingresa el Numero: " << endl;
+    cin >> Num;
+    
+    while(Num>0){
+        i = Num%10;
+        Num = Num/10;
+        
+        if(2<i>0){
+            
+            while(a < i && i > 2){
+            pot = pot+i*i;
+            a++;
+            cout<<"Pot: "<<pot <<endl;
+            }
+        }
+        
+        else if( 2>=i>0)sum = sum+i*i;
+        else if(i == 0) sum = sum+1;
+    }
+    
+    sum = sum+pot;
+    cout << "resultado = "<<sum<<endl;
+    
+    return 0;
+}

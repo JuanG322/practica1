@@ -1,0 +1,55 @@
+#include <iostream>
+
+using namespace std;
+
+int
+main ()
+{
+  int valor;
+  int B1, B2, B3, B4;
+  int M1, M2, M3, M4, M5;
+
+  cout << "Ingresa un valor: " << endl;
+  cin >> valor;
+
+  B1 = valor / 50000;
+  cout << "Billete 50000; " << B1 << endl;
+  valor = valor - (B1 * 50000);
+  
+  B2 = valor / 20000;
+  cout << "Billete 20000; " << B2 << endl;
+  valor = valor - (B2 * 20000);
+  
+  B3 = valor / 10000;
+  cout << "Billete 10000; " << B3 << endl;
+  valor = valor - (B3 * 10000);
+ 
+  B4 = valor / 5000;
+  cout << "Billete 5000; " << B4 << endl;
+  valor = valor - (B4 * 5000);
+
+  M1 = valor / 1000;
+  cout << "Moneda 1000; " << M1 << endl;
+  valor = valor - (M1 * 1000);
+
+  M2 = valor / 500;
+  cout << "Monedas 500: " << M2 << endl;
+  valor = valor - (M2 * 500);
+
+  M3 = valor / 200;
+  cout << "Monedas 200: " << M3 << endl;
+  valor = valor - (M3 * 200);
+
+  M4 = valor / 100;
+  cout << "Monedas 100: " << M4 << endl;
+  valor = valor - (M4 * 100);
+
+  M5 = valor / 50;
+  cout << "Monedas 50: " << M5 << endl;
+  valor = valor - (M5 * 50);
+
+  cout << "La devuelta es de : " << valor << endl;
+
+
+  return 0;
+}

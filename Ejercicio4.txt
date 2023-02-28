@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int Num1,Num2,Num3,Num4;
+    
+    cout << "Ingrese el primer Numero: " <<endl;
+    cin >> Num1;
+    
+    cout << "Ingrese el primer Numero: " <<endl;
+    cin >> Num2;
+    
+    Num3 = Num1 % 100;
+    Num4 = Num1 % 100;
+    
+    if(Num1 > 2400 || Num2 > 2400 || Num3 > 60 || Num4> 60) cout << Num1 << " o " << Num2 << " es un tiempo invalido."<<endl;
+    
+    else{
+        Num1 = Num1+Num2;
+        Num2 = Num1%100;
+        if(Num2 >= 60){
+            Num2 = Num2 - 60;
+            Num1 = Num1 + 100 + Num2 - 60;
+            cout << "La hora es " << Num1 << endl;
+        }
+        else cout << "La hora es " << Num1 << endl;
+    }
+    
+    return 0;
+}
