@@ -1,0 +1,198 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int opcion;
+    
+    cout << "Selecione una opcion: " << endl;
+    cout << "2. Decueltas" << endl;
+    cout << "3. Fecha valida o invalida" << endl;
+    cout << "4. Suma de horas" << endl;
+    cout << "8. Suam de multiplos" << endl;
+    cout << "9. Suma de Potencias" << endl;
+    cout << "11. El N numero primo" << endl;
+    cout << "Escoje una: ";
+    cin >> opcion;
+    
+    switch(opcion){
+        case 2:
+        int valor;
+        
+        int B1, B2, B3, B4;
+        int M1, M2, M3, M4, M5;
+
+        cout << "Ingresa un valor: " << endl;
+        cin >> valor;
+
+        B1 = valor / 50000;
+        cout << "Billete 50000; " << B1 << endl;
+        valor = valor - (B1 * 50000);
+  
+        B2 = valor / 20000;
+        cout << "Billete 20000; " << B2 << endl;
+        valor = valor - (B2 * 20000);
+  
+        B3 = valor / 10000;
+        cout << "Billete 10000; " << B3 << endl;
+        valor = valor - (B3 * 10000);
+  
+        B4 = valor / 5000;
+        cout << "Billete 5000; " << B4 << endl;
+        valor = valor - (B4 * 5000);
+
+        M1 = valor / 1000;
+        cout << "Moneda 1000; " << M1 << endl;
+        valor = valor - (M1 * 1000);
+
+        M2 = valor / 500;
+        cout << "Monedas 500: " << M2 << endl;
+        valor = valor - (M2 * 500);
+ 
+        M3 = valor / 200;
+        cout << "Monedas 200: " << M3 << endl;
+        valor = valor - (M3 * 200);
+ 
+        M4 = valor / 100;
+        cout << "Monedas 100: " << M4 << endl;
+        valor = valor - (M4 * 100);
+
+        M5 = valor / 50;
+        cout << "Monedas 50: " << M5 << endl;
+        valor = valor - (M5 * 50);
+
+        cout << "La devuelta es de : " << valor << endl;
+        break;
+        
+        case 3:
+        
+        int Mes, Dia;
+     
+        cout<<"Escribe el Dia: ";
+        cin >> Dia;
+        cout<<"Escribe el Mes: ";
+        cin >> Mes;
+    
+    
+        if(Mes == 1 || Mes == 3 || Mes == 5 || Mes == 7 || Mes == 8 || Mes == 10 || Mes == 12){
+            cout <<"Hola 31 "<< endl;
+            if(31 >= Dia > 0) cout << Dia << "/" << Mes <<" es una fecha valida."<<endl;
+            else cout << Dia << "/" << Mes <<" es una fecha invalida."<<endl;
+        }
+    
+        else if(Mes == 4 || Mes == 6 || Mes == 9 || Mes == 11){
+            cout <<"Hola 30 "<< endl;
+            if(30 >= Dia > 0) cout << Dia << "/" << Mes <<" es una fecha valida."<<endl;
+            else cout << Dia << "/" << Mes <<" es una fecha invalida."<<endl;
+        }
+    
+        else if(Mes == 2){
+            cout <<"Hola 2 "<< endl;
+            if(28 >= Dia > 0)cout << Dia << "/" << Mes <<" es una fecha valida."<<endl;
+            else if(29 == Dia)cout << Dia << "/" << Mes <<" es una fecha valida en bisiesto."<<endl;
+            else cout << Dia << "/" << Mes <<" es una fecha invalida."<<endl;
+        }
+     
+        else cout<<Mes<<" es un mes invalido."<<endl;
+        break;
+        
+        case 4:
+        
+        int Num1,Num2,Num3,Num4;
+    
+        cout << "Ingrese el primer Numero: " <<endl;
+        cin >> Num1;
+    
+        cout << "Ingrese el primer Numero: " <<endl;
+        cin >> Num2;
+    
+       Num3 = Num1 % 100;
+       Num4 = Num1 % 100;
+    
+       if(Num1 > 2400 || Num2 > 2400 || Num3 > 60 || Num4> 60) cout << Num1 << " o " << Num2 << " es un tiempo invalido."<<endl;
+    
+       else{
+           Num1 = Num1+Num2;
+           Num2 = Num1%100;
+           if(Num2 >= 60){
+               Num2 = Num2 - 60;
+               Num1 = Num1 + 100 + Num2 - 60;
+               cout << "La hora es " << Num1 << endl;
+           }
+           else cout << "La hora es " << Num1 << endl;
+       }
+        break;
+        
+        case 8:
+        
+        int A,B,C,D,R1,R2;
+    
+        cout << "Ingresa los 3 Numeros: " << endl;
+        cin >> A >> B >> C;
+    
+        while(D<C){
+            if(D%A == 0)R1 = R1+D;
+        
+            if(D%B == 0)R2 = R2+D;
+        
+            D++;
+        }
+        R1 = R1 + R2;
+        cout<<"La suma de todos los múltiplos de a y b que son menores a c es :"<<R1<<endl;
+        break;
+        
+        case 9:
+        
+        int Num9,i1,sum,a,pot;
+    
+        cout << "Ingresa el Numero: " << endl;
+        cin >> Num9;
+    
+        while(Num9>0){
+            i1 = Num9%10;
+            Num9 = Num9/10;
+        
+            if(2<i1>0){
+            
+                while(a < i1 && i1 > 2){
+                pot = pot+i1*i1;
+                a++;
+               // cout<<"Pot: "<<pot <<endl;
+                }
+            }
+        
+            else if( 2>=i1>0)sum = sum+i1*i1;
+            else if(i1 == 0) sum = sum+1;
+        }
+    
+        sum = sum+pot;
+        //cout << "resultado = "<<sum<<endl;
+    
+        break;
+        
+        case 11:
+        
+        int Num,b,i=2;
+    
+        cout << "Ingresa el Numero: " << endl;
+        cin >> Num;
+    
+        while(b<Num){
+    
+            if(i % 2 == 0 && i != 2 || i % 3 == 0 && i != 3){
+                i++;
+            }
+       
+            else{
+                b++;
+                i++;
+            }
+         
+        }
+        cout <<"El primo número "<<Num<<" es "<<i-1<<endl;
+        break;
+    }
+    
+    return 0;
+}
