@@ -7,16 +7,39 @@ int main()
     int opcion;
     
     cout << "Selecione una opcion: " << endl;
+    cout << "1. Vocal o consonante" << endl;
     cout << "2. Decueltas" << endl;
     cout << "3. Fecha valida o invalida" << endl;
     cout << "4. Suma de horas" << endl;
     cout << "8. Suam de multiplos" << endl;
     cout << "9. Suma de Potencias" << endl;
-    cout << "11. El N numero primo" << endl;
+    cout << "10. El N numero primo" << endl;
     cout << "Escoje una: ";
     cin >> opcion;
     
     switch(opcion){
+        
+        case 1:
+        
+        char letra;
+        cout << "Ingrese la letra: ";
+        cin >> letra;
+    
+        letra = toupper(letra);
+
+    
+        if (letra == 'A' || letra == 'E' || letra == 'I' || letra == 'O' || letra == 'U'){
+            cout << letra << " es una vocal" << endl;
+        } 
+    
+        else if (letra >= 'A' && letra <= 'Z'){
+            cout << letra << " es una consonante" << endl;
+        }
+        
+        else cout << letra << " no es una letra"<<endl;    
+
+        break;
+        
         case 2:
         int valor;
         

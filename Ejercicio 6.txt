@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int Num, i = 1;
+    double Sum = 1.0;
+    double x = 1.0;
+
+    cout << "Ingrese el número de elementos a usarse: ";
+    cin >> Num;
+
+    while (Num > i) {
+        x = x / i;
+        Sum = Sum + x;
+        i++;
+    }
+
+    cout << "e es aproximadamente: " << Sum << endl;
+
+    return 0;
+}

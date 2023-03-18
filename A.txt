@@ -1,0 +1,1 @@
+Puntero son variables que almacenan direcciones de memoria

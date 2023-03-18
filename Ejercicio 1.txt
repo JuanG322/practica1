@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char letra;
+    cout << "Ingrese la letra: ";
+    cin >> letra;
+    
+    letra = toupper(letra);
+
+    
+    if (letra == 'A' || letra == 'E' || letra == 'I' || letra == 'O' || letra == 'U'){
+        cout << letra << " es una vocal" << endl;
+    }
+    
+    else if (letra >= 'A' && letra <= 'Z'){
+        cout << letra << " es una consonante" << endl;
+    }
+        
+    else cout << letra << " no es una letra"<<endl;    
+
+    return 0;
+}

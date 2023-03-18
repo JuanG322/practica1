@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num,i=2,a,b;
+    cout<<"Escriba el numero: ";
+    cin >> num;
+    a = num;
+    
+    while(i<=num){
+        b++;
+        if(a%i == 0 && a%num == 0){
+            i++;
+        }
+        else a++;
+    }
+    
+    cout <<"El mínimo común múltiplo es: "<<a<<endl;
+    cout << "Iteracciones: "<<b;
+
+    return 0;
+}

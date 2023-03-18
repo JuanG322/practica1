@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int Num,Sum,Pares;
+    int a = 0, b = 1;
+    cout<<"Ingrese el número N: ";
+    cin >> Num;
+    
+    while(Num > a+b){
+        Sum = a + b;
+        a = b;
+        b = Sum;
+        
+        if(Sum % 2 == 0){
+            Pares = Sum + Pares;
+        }
+    }
+    
+    cout <<"El resultado de la suma es: " << Pares << endl;
+
+    return 0;
+}
